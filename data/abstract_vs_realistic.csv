@@ -1,0 +1,401 @@
+prompt_id	variation	prompt	category
+0	0	A red 3d-rendered pyramid on a grey background	abstract
+0	1	A 3D-rendered red pyramid against a grey background	abstract
+0	2	A red pyramid in 3D rendering on a grey backdrop	abstract
+0	3	A 3D red pyramid set on a grey background	abstract
+0	4	A grey background with a red 3D-rendered pyramid	abstract
+1	0	A blue 3d-rendered cube.	abstract
+1	1	A 3D-rendered cube in blue.	abstract
+1	2	A cube rendered in 3D with a blue color.	abstract
+1	3	A blue cube created with 3D rendering.	abstract
+1	4	A 3D model of a cube in blue.	abstract
+2	0	A red pyramid in a forest.	abstract
+2	1	A crimson pyramid within a woodland.	abstract
+2	2	A scarlet pyramid located in a forest.	abstract
+2	3	A ruby pyramid standing amidst trees in a forest.	abstract
+2	4	A red-colored pyramid situated in a forest.	abstract
+3	0	A pyramid with black and white stripes.	abstract
+3	1	A pyramid featuring black and white stripes.	abstract
+3	2	A pyramid adorned with stripes in black and white.	abstract
+3	3	A striped pyramid in black and white.	abstract
+3	4	A pyramid with alternating black and white stripes.	abstract
+4	0	A yellow ball on grass.	abstract
+4	1	A yellow-colored ball on the grass.	abstract
+4	2	A ball in yellow color resting on grass.	abstract
+4	3	On the grass, a yellow ball.	abstract
+4	4	A yellow ball placed on the grassy surface.	abstract
+5	0	A slab of metal in the desert.	abstract
+5	1	A slab of metal standing in a desert.	abstract
+5	2	A single slab made of metal in the arid desert.	abstract
+5	3	A lone metal slab in the middle of the desert.	abstract
+5	4	A slab of metal in the desert landscape.	abstract
+6	0	A yellow cylinder on a white background.	abstract
+6	1	A yellow cylindrical polygon against a white background.	abstract
+6	2	A yellow cylinder set on a white backdrop.	abstract
+6	3	A yellow cylinder on a white background.	abstract
+6	4	A yellow multi-sided cylinder on a plain white surface.	abstract
+7	0	An orange trapezoid in front of a brick wall.	abstract
+7	1	An orange-colored trapezoid placed before a brick wall.	abstract
+7	2	A trapezoid in orange hue located in front of a wall made of bricks.	abstract
+7	3	A brick wall with an orange trapezoid positioned in front of it.	abstract
+7	4	An orange trapezoid situated before a brickwork wall.	abstract
+8	0	A green dodecahedron.	abstract
+8	1	A dodecahedron colored green.	abstract
+8	2	A twelve-sided green polyhedron.	abstract
+8	3	A green-shaded dodecahedron.	abstract
+8	4	A green geometric shape with twelve faces.	abstract
+9	0	A green 3d-rendered pyramid in white room.	abstract
+9	1	A green 3D pyramid in a white room.	abstract
+9	2	A white room with a green 3D-rendered pyramid.	abstract
+9	3	In a white room, there is a green 3D pyramid.	abstract
+9	4	A green pyramid rendered in 3D inside a white room.	abstract
+10	0	A blue cone on a white background.	abstract
+10	1	A blue-colored cone on a white backdrop.	abstract
+10	2	A blue cone set against a white background.	abstract
+10	3	A white background with a blue cone in front.	abstract
+10	4	A blue cone placed on a white surface.	abstract
+11	0	An orange sphere on a wooden table.	abstract
+11	1	An orange-colored sphere resting on a wooden table.	abstract
+11	2	An orange ball placed on a wooden surface.	abstract
+11	3	A wooden table with an orange sphere on it.	abstract
+11	4	A wooden table holding an orange sphere.	abstract
+12	0	A green hexagon in the sky.	abstract
+12	1	A green-colored hexagon floating in the sky.	abstract
+12	2	A hexagon with a green hue in the sky.	abstract
+12	3	A skyward hexagon colored green.	abstract
+12	4	A green hexagon appearing in the sky.	abstract
+13	0	A purple octahedron on a marble surface.	abstract
+13	1	A purple-colored octahedron resting on a marble surface.	abstract
+13	2	An octahedron in purple placed on a marble background.	abstract
+13	3	A marble surface with a purple octahedron on it.	abstract
+13	4	A purple octahedron situated on top of a marble surface.	abstract
+14	0	A silver star on a red background.	abstract
+14	1	A silver-colored star set against a red backdrop.	abstract
+14	2	A shiny silver star displayed on a red surface.	abstract
+14	3	A metallic silver star positioned on a red background.	abstract
+14	4	A silver star featured on a red canvas.	abstract
+15	0	A brown triangle in a blue ocean.	abstract
+15	1	A brown-colored triangle in the middle of a blue ocean.	abstract
+15	2	A brown triangle floating in a blue sea.	abstract
+15	3	A brown triangle submerged in a blue ocean.	abstract
+15	4	A brown triangle resting in the blue waters of the ocean.	abstract
+16	0	A white 3d-rendered cylinder on a green background.	abstract
+16	1	A white cylinder in 3D rendering on a green backdrop.	abstract
+16	2	A green background featuring a 3D-rendered white cylinder.	abstract
+16	3	A 3D model of a white cylinder set against a green background.	abstract
+16	4	A green backdrop showcasing a white 3D-rendered cylinder.	abstract
+17	0	A black cube on a sandy beach.	abstract
+17	1	A black-colored cube resting on a sandy beach.	abstract
+17	2	A dark cube situated on a sandy beach.	abstract
+17	3	A black cube lying on the beach's sand.	abstract
+17	4	A cube in black on a sandy shoreline.	abstract
+18	0	A yellow torus on a grey background.	abstract
+18	1	A yellow doughnut shape against a grey backdrop.	abstract
+18	2	A yellow ring situated on a grey background.	abstract
+18	3	A grey background featuring a yellow torus.	abstract
+18	4	A yellow torus displayed on a grey canvas.	abstract
+19	0	A red heart on a white background.	abstract
+19	1	A red-colored heart on a white backdrop.	abstract
+19	2	A crimson heart placed on a white surface.	abstract
+19	3	A scarlet heart set against a white background.	abstract
+19	4	A red heart displayed on a plain white canvas.	abstract
+20	0	A green cube in a snowy landscape.	abstract
+20	1	A green-colored cube positioned in a snowy environment.	abstract
+20	2	A green cube situated amidst a snowy scene.	abstract
+20	3	A green cube placed in a snow-covered landscape.	abstract
+20	4	A green cube resting in a snowy terrain.	abstract
+21	0	A blue pyramid on a rocky terrain.	abstract
+21	1	A blue-colored pyramid on rocky ground.	abstract
+21	2	A blue pyramid situated on a rugged landscape.	abstract
+21	3	A blue pyramid standing on a rocky surface.	abstract
+21	4	A blue pyramid placed on a terrain with rocks.	abstract
+22	0	A golden sphere on a black velvet surface.	abstract
+22	1	A golden-colored sphere on a black velvet background.	abstract
+22	2	A golden orb resting on a black velvet surface.	abstract
+22	3	A gold sphere placed on a velvet black surface.	abstract
+22	4	A sphere of gold on a background of black velvet.	abstract
+23	0	A purple dodecahedron on a reflective surface.	abstract
+23	1	A purple dodecahedron resting on a reflective surface.	abstract
+23	2	A purple twelve-sided shape placed on a reflective surface.	abstract
+23	3	A purple geometric dodecahedron situated on a reflective surface.	abstract
+23	4	A purple dodecahedron positioned on a reflective surface.	abstract
+24	0	A white star on a navy blue background.	abstract
+24	1	A white star set against a navy blue backdrop.	abstract
+24	2	A white star positioned on a dark blue background.	abstract
+24	3	A white star placed on a navy blue canvas.	abstract
+24	4	A white star displayed on a deep blue background.	abstract
+25	0	A pink triangle on a concrete surface.	abstract
+25	1	A pink-colored triangle on a concrete ground.	abstract
+25	2	A pink triangle placed on a cement surface.	abstract
+25	3	A triangle in pink resting on a concrete floor.	abstract
+25	4	A concrete surface with a pink triangle on it.	abstract
+26	0	A blue sphere on a grassy hill.	abstract
+26	1	A blue-colored sphere on a hill covered in grass.	abstract
+26	2	A blue sphere resting on a grassy slope.	abstract
+26	3	A grassy hill with a blue sphere on top.	abstract
+26	4	A hill with green grass and a blue sphere.	abstract
+27	0	An orange cylinder on a grey pavement.	abstract
+27	1	An orange-colored cylinder positioned on grey pavement.	abstract
+27	2	A cylindrical orange object lying on a grey pavement.	abstract
+27	3	On the grey pavement, there is an orange cylinder.	abstract
+27	4	A grey pavement features an orange cylinder.	abstract
+28	0	A red torus in a snowy forest.	abstract
+28	1	A red torus situated in a snowy forest.	abstract
+28	2	A red ring-like structure in a forest covered with snow.	abstract
+28	3	In a snow-covered forest, there is a red torus.	abstract
+28	4	A snowy forest with a red torus present.	abstract
+29	0	A pink 3d-rendered sphere on a black background.	abstract
+29	1	A pink 3D sphere rendered on a black background.	abstract
+29	2	A 3D-rendered pink sphere against a black backdrop.	abstract
+29	3	A black background featuring a pink 3D sphere.	abstract
+29	4	A pink 3D sphere displayed on a black background.	abstract
+30	0	A green 3d-rendered sphere on a white background.	abstract
+30	1	A green sphere rendered in 3D on a white backdrop.	abstract
+30	2	A 3D green sphere placed against a white background.	abstract
+30	3	A three-dimensional green sphere on a plain white background.	abstract
+30	4	A green 3D-rendered sphere set on a white surface.	abstract
+31	0	A purple 3d-rendered cone.	abstract
+31	1	A 3D-rendered cone in purple.	abstract
+31	2	A cone in purple, rendered in 3D.	abstract
+31	3	A cone, 3D-rendered in the color purple.	abstract
+31	4	A purple-colored cone with a 3D rendering.	abstract
+32	0	A blue cylinder in a cityscape.	abstract
+32	1	A blue-colored cylinder within a cityscape.	abstract
+32	2	A cityscape featuring a blue cylinder.	abstract
+32	3	A blue cylinder located in an urban setting.	abstract
+32	4	In a cityscape, there's a blue cylinder.	abstract
+33	0	A hexagon with red and blue stripes.	abstract
+33	1	A hexagonal shape with red and blue stripes.	abstract
+33	2	A red and blue striped hexagon.	abstract
+33	3	A hexagon featuring blue and red stripes.	abstract
+33	4	A hexagon adorned with stripes of red and blue.	abstract
+34	0	A pink ball on a sandy beach.	abstract
+34	1	A pink-colored ball laying in sand on a beach.	abstract
+34	2	A sandy beach with a pink ball on it.	abstract
+34	3	On a sandy shore, there is a pink ball.	abstract
+34	4	A beach with sand featuring a pink ball.	abstract
+35	0	A block of ice in a snowy landscape.	abstract
+35	1	A block of ice situated in a snow-covered landscape.	abstract
+35	2	A snow-filled scene featuring a block of ice.	abstract
+35	3	A snowy terrain with an ice block present.	abstract
+35	4	An ice block standing in a wintry landscape.	abstract
+36	0	A red octagonal prism on a black background.	abstract
+36	1	A red-colored octagonal prism against a black backdrop.	abstract
+36	2	An octagonal red prism set on a black background.	abstract
+36	3	A black background featuring a red octagonal prism.	abstract
+36	4	On a black background lies a red octagonal prism.	abstract
+37	0	A teal rhombus in front of a wooden fence.	abstract
+37	1	A teal-colored rhombus positioned in front of a wooden fence.	abstract
+37	2	A wooden fence with a teal rhombus placed in front of it.	abstract
+37	3	In front of a wooden fence, there is a teal rhombus.	abstract
+37	4	A teal rhombus stands before a wooden fence.	abstract
+38	0	A yellow tetrahedron.	abstract
+38	1	A tetrahedron in yellow color.	abstract
+38	2	A four-sided pyramid in yellow.	abstract
+38	3	A geometric yellow tetrahedron.	abstract
+38	4	A yellow-shaded tetrahedron.	abstract
+39	0	A magenta torus floating in the sky.	abstract
+39	1	A magenta-colored torus hovering in the sky.	abstract
+39	2	A floating magenta torus in the air.	abstract
+39	3	A torus in magenta suspended in the sky.	abstract
+39	4	A magenta torus levitating in the atmosphere.	abstract
+40	0	A car in front of a brick wall.	realistic
+40	1	A vehicle parked in front of a brick wall.	realistic
+40	2	An automobile positioned before a brick wall.	realistic
+40	3	A car situated in front of a brick wall.	realistic
+40	4	An auto standing in front of a brick wall.	realistic
+41	0	A duck swimming on water.	realistic
+41	1	A duck gliding across the water.	realistic
+41	2	A duck paddling through the water.	realistic
+41	3	A duck floating on the surface of the water.	realistic
+41	4	A duck swimming in the water.	realistic
+42	0	A cat sitting on a windowsill.	realistic
+42	1	A cat perched on a windowsill.	realistic
+42	2	A feline resting on a windowsill.	realistic
+42	3	A cat lounging on the windowsill.	realistic
+42	4	A kitty sitting atop a windowsill.	realistic
+43	0	A boat sailing on a calm lake.	realistic
+43	1	A boat gliding across a serene lake.	realistic
+43	2	A vessel navigating on tranquil lake waters.	realistic
+43	3	A ship cruising on a still lake.	realistic
+43	4	A boat drifting on the peaceful surface of a lake.	realistic
+44	0	A plane flying above the clouds.	realistic
+44	1	A plane soaring over the clouds.	realistic
+44	2	An aircraft flying high above the cloud cover.	realistic
+44	3	A jet cruising through the sky above the clouds.	realistic
+44	4	An airplane navigating the skies over the cloud tops.	realistic
+45	0	A horse grazing in a meadow.	realistic
+45	1	A horse feeding in a grassy field.	realistic
+45	2	A horse eating grass in a pasture.	realistic
+45	3	A horse munching on grass in a meadow.	realistic
+45	4	A horse browsing in a green meadow.	realistic
+46	0	A bicycle leaning against a tree.	realistic
+46	1	A bicycle resting against a tree.	realistic
+46	2	A bike propped up against a tree.	realistic
+46	3	A bicycle standing next to a tree.	realistic
+46	4	A bike leaning on a tree.	realistic
+47	0	A dog playing with a ball in a park.	realistic
+47	1	A dog having fun with a ball in a park.	realistic
+47	2	A dog enjoying a ball game in a park.	realistic
+47	3	A dog interacting with a ball at the park.	realistic
+47	4	A dog engaged in playing with a ball in the park.	realistic
+48	0	A bird perched on a telephone wire.	realistic
+48	1	A bird sitting on a telephone line.	realistic
+48	2	A bird resting on a wire.	realistic
+48	3	A bird balanced on a telephone cable.	realistic
+48	4	A bird settled on a telegraph wire.	realistic
+49	0	A bus driving through a busy street.	realistic
+49	1	A bus traveling along a bustling street.	realistic
+49	2	A bus moving through a crowded road.	realistic
+49	3	A bus navigating a busy city street.	realistic
+49	4	A bus driving down a hectic street.	realistic
+50	0	A butterfly resting on a flower.	realistic
+50	1	A butterfly perched on a blossom.	realistic
+50	2	A butterfly sitting atop a flower.	realistic
+50	3	A butterfly alighting on a flower.	realistic
+50	4	A butterfly settled on a bloom.	realistic
+51	0	A child building a sandcastle on the beach.	realistic
+51	1	A child constructing a sandcastle by the seashore.	realistic
+51	2	A youngster creating a sandcastle on the beach.	realistic
+51	3	A kid making a sandcastle at the seaside.	realistic
+51	4	A child crafting a sandcastle on the sandy beach.	realistic
+52	0	A train passing through a mountain tunnel.	realistic
+52	1	A train traveling through a tunnel in the mountains.	realistic
+52	2	A locomotive moving through a mountain passage.	realistic
+52	3	A train journeying through a tunnel carved in a mountain.	realistic
+52	4	A railway train passing through a mountainous tunnel.	realistic
+53	0	A chef preparing a meal in a kitchen.	realistic
+53	1	A chef cooking a dish in a kitchen.	realistic
+53	2	A chef making a meal in the kitchen.	realistic
+53	3	A cook preparing food in a kitchen.	realistic
+53	4	A chef working on a meal in the kitchen.	realistic
+54	0	A pianist performing on a stage.	realistic
+54	1	A pianist playing music on a stage.	realistic
+54	2	A piano player giving a performance on the stage.	realistic
+54	3	On a stage, a pianist is performing.	realistic
+54	4	A musician at the piano performing on stage.	realistic
+55	0	A gardener planting flowers in a garden.	realistic
+55	1	A gardener sowing flowers in a garden.	realistic
+55	2	A gardener putting flowers in the soil of a garden.	realistic
+55	3	A gardener inserting flowers into the earth in a garden.	realistic
+55	4	A gardener positioning flowers in the garden beds.	realistic
+56	0	A surfer riding a wave in the ocean.	realistic
+56	1	A surfer catching a wave in the sea.	realistic
+56	2	A wave being ridden by a surfer in the water.	realistic
+56	3	An ocean wave with a surfer riding on it.	realistic
+56	4	A person surfing on a wave in the ocean.	realistic
+57	0	A fisherman casting a line into a river.	realistic
+57	1	A fisherman throwing a line into a river.	realistic
+57	2	A fisherman casting his fishing line into a river.	realistic
+57	3	A man fishing by casting a line into a river.	realistic
+57	4	A fisherman hurling a line into the river.	realistic
+58	0	A lion resting in the shade of a tree.	realistic
+58	1	A lion lying in the shade of a tree.	realistic
+58	2	A lion taking a nap in the shadow of a tree.	realistic
+58	3	A lion lounging under the tree's shade.	realistic
+58	4	A lion relaxing beneath the shadow of a tree.	realistic
+59	0	A skier gliding down a snowy slope.	realistic
+59	1	A skier sliding down a snow-covered hill.	realistic
+59	2	A skier maneuvering down a snowy mountain.	realistic
+59	3	A skier descending a snow-laden slope.	realistic
+59	4	A skier skiing down a snow-covered incline.	realistic
+60	0	A cyclist racing down a country road.	realistic
+60	1	A cyclist speeding along a rural road.	realistic
+60	2	A biker racing on a countryside path.	realistic
+60	3	A cyclist riding quickly down a country lane.	realistic
+60	4	A cyclist zooming down a rural roadway.	realistic
+61	0	A dancer twirling in a ballet studio.	realistic
+61	1	A dancer spinning in a ballet studio.	realistic
+61	2	A ballerina twirling in a dance studio.	realistic
+61	3	A dancer performing a spin in a ballet room.	realistic
+61	4	A ballet dancer twirling inside a studio.	realistic
+62	0	A firefighter extinguishing a blaze.	realistic
+62	1	A firefighter putting out a fire.	realistic
+62	2	A firefighter hosing down flames.	realistic
+62	3	A firefighter battling a fire.	realistic
+62	4	A firefighter working to extinguish a blaze.	realistic
+63	0	A scientist conducting an experiment in a lab.	realistic
+63	1	A researcher performing an experiment in a laboratory.	realistic
+63	2	A scientist carrying out an experiment in a lab.	realistic
+63	3	A laboratory where a scientist is conducting an experiment.	realistic
+63	4	An experiment being conducted by a scientist in a lab.	realistic
+64	0	A teacher writing on a chalkboard in a classroom.	realistic
+64	1	A teacher writing on a blackboard in a classroom.	realistic
+64	2	A teacher jotting notes on a chalkboard in a classroom.	realistic
+64	3	In a classroom, a teacher is writing on a chalkboard.	realistic
+64	4	A teacher using a chalkboard to write in a classroom.	realistic
+65	0	A baker frosting a cake in a bakery.	realistic
+65	1	A baker applying frosting to a cake in a bakery.	realistic
+65	2	A baker decorating a cake with frosting in a bakery.	realistic
+65	3	A baker spreading icing on a cake in a bakery.	realistic
+65	4	A baker finishing a cake with frosting in a bakery.	realistic
+66	0	A runner crossing the finish line in a race.	realistic
+66	1	A runner breaching the finish line during a race.	realistic
+66	2	A runner completing the race by crossing the finish line.	realistic
+66	3	A racer crossing the end line in a competition.	realistic
+66	4	A competitor reaching the finish line in a running race.	realistic
+67	0	A climber reaching the summit of a mountain.	realistic
+67	1	A mountaineer reaching the peak of a mountain.	realistic
+67	2	A climber arriving at the top of a mountain.	realistic
+67	3	An alpinist making it to the mountain's summit.	realistic
+67	4	A hiker attaining the mountain's highest point.	realistic
+68	0	A swimmer diving into a pool.	realistic
+68	1	A swimmer plunging into a pool.	realistic
+68	2	A swimmer leaping into a swimming pool.	realistic
+68	3	A swimmer jumping into the pool.	realistic
+68	4	A swimmer entering the pool with a dive.	realistic
+69	0	A photographer snapping pictures in a forest.	realistic
+69	1	A photographer taking photos in a wooded area.	realistic
+69	2	A photographer capturing images in a forest.	realistic
+69	3	A photographer shooting pictures amid trees in a forest.	realistic
+69	4	A photographer photographing scenes in a forest setting.	realistic
+70	0	A painter creating a mural on a building.	realistic
+70	1	A painter working on a mural on the side of a building.	realistic
+70	2	An artist painting a large mural on a building wall.	realistic
+70	3	A mural being painted by an artist on a building.	realistic
+70	4	A person creating a mural on the exterior of a building.	realistic
+71	0	A hiker exploring a dense forest trail.	realistic
+71	1	A hiker navigating through a thick forest trail.	realistic
+71	2	A person hiking along a lush forest path.	realistic
+71	3	A traveler walking on a dense wooded trail.	realistic
+71	4	An adventurer exploring a heavily wooded trail.	realistic
+72	0	A pilot preparing for takeoff in a cockpit.	realistic
+72	1	A pilot getting ready for takeoff in the cockpit.	realistic
+72	2	A pilot in the cockpit preparing for departure.	realistic
+72	3	A pilot making preparations for takeoff inside the cockpit.	realistic
+72	4	A pilot in the cockpit getting set for takeoff.	realistic
+73	0	A singer performing at a concert.	realistic
+73	1	A vocalist giving a performance at a concert.	realistic
+73	2	A musician singing live at a concert.	realistic
+73	3	An artist on stage performing at a concert.	realistic
+73	4	A performer singing at a live concert.	realistic
+74	0	A farmer harvesting crops in a field.	realistic
+74	1	A farmer gathering crops from a field.	realistic
+74	2	A farmer collecting the harvest in a field.	realistic
+74	3	A farmer working to harvest crops in the field.	realistic
+74	4	A farmer picking crops in a field.	realistic
+75	0	A mechanic fixing a car in a garage.	realistic
+75	1	A mechanic working on a car inside a garage.	realistic
+75	2	A technician repairing a vehicle in a garage.	realistic
+75	3	A garage scene with a mechanic fixing a car.	realistic
+75	4	A mechanic performing car repairs in a garage.	realistic
+76	0	A librarian organizing books on a shelf.	realistic
+76	1	A librarian arranging books on a bookshelf.	realistic
+76	2	A librarian placing books onto a shelf.	realistic
+76	3	A librarian sorting books on a library shelf.	realistic
+76	4	A librarian stacking books on a bookcase.	realistic
+77	0	A diver exploring a coral reef.	realistic
+77	1	A scuba diver investigating a coral reef.	realistic
+77	2	An underwater diver examining a coral reef.	realistic
+77	3	A diver navigating through a coral reef.	realistic
+77	4	A diver swimming around a coral reef.	realistic
+78	0	A doctor examining a patient in a clinic.	realistic
+78	1	A physician checking a patient at a medical clinic.	realistic
+78	2	A healthcare professional inspecting a patient in a clinic.	realistic
+78	3	A doctor conducting an examination of a patient in a medical office.	realistic
+78	4	A clinician assessing a patient in a health facility.	realistic
+79	0	A sculptor chiseling a statue from marble.	realistic
+79	1	A sculptor carving a statue out of marble.	realistic
+79	2	An artist chiseling a sculpture from a marble block.	realistic
+79	3	A person creating a statue by chiseling marble.	realistic
+79	4	A sculptor working on a marble statue with a chisel.	realistic
