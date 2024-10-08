@@ -18,11 +18,11 @@ def aggregate_object_scores(df: pd.DataFrame, metric: str = "std") -> pd.DataFra
     """Use a metric to aggregate the variations for each prompt.
 
     Args:
-      df: DataFrame with raw benchmark results.
-      metric:  Metric to use.
+        df: DataFrame with raw benchmark results.
+        metric:  Metric to use.
 
     Returns:
-      A DataFrame containing a aggregated score per prompt.
+        A DataFrame containing a aggregated score per prompt.
 
     """
     agg_dict = {
@@ -34,13 +34,12 @@ def aggregate_object_scores(df: pd.DataFrame, metric: str = "std") -> pd.DataFra
     return df
 
 
-def plot_result(final_df: pd.DataFrame, out_dir: Path):
-    """Plots a line plot and a comparative bar plot visualizing the final
-    results of the benchmark for one model.
+def plot_result(final_df: pd.DataFrame, out_dir: Path) -> None:
+    """Produces a line plot and a comparative bar plot for one model.
 
     Args:
-      final_df: Final benchmark results.
-      out_dir: Where to save the plots.
+        final_df: Final benchmark results.
+        out_dir: Where to save the plots.
 
     """
     # Line plot before aggregating to show variation
@@ -72,9 +71,9 @@ def generate_and_score(
     """Run the benchmark and add scores to the DataFrame in place.
 
     Args:
-      df: DataFrame containing the prompts and variations with MultiIndex ["prompt_id", "variation"].
-      img_dir: Where to save the generated images.
-      scorer: Text-to-image similarity score to use.
+        df: DataFrame containing the prompts and variations with MultiIndex ["prompt_id", "variation"].
+        img_dir: Where to save the generated images.
+        scorer: Text-to-image similarity score to use.
 
     """
     os.makedirs(img_dir, exist_ok=True)
@@ -90,12 +89,11 @@ def main(
     """Run the benchmark, save final_result and visualization.
 
     Args:
-      prompts: Path to a tsv file containing the columns
-        ["prompt_id", "variation", "prompt", "category"].
-      out_dir: Output folder for the results, the directory will be populated
-        with a folder containing the benchmark results.
-      model: The model to be tested
-      scorer: text-to-image similarity score to use.
+        prompts: Path to a tsv file containing the columns ["prompt_id", "variation", "prompt", "category"].
+        out_dir: Output folder for the results, the directory will be populated with a folder containing
+            the benchmark results.
+        model: The model to be tested
+        scorer: text-to-image similarity score to use.
 
     """
 
