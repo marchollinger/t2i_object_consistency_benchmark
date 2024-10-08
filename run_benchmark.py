@@ -17,9 +17,13 @@ from utils.t2i_variants import DALL_E, SD, SD3
 def aggregate_object_scores(df: pd.DataFrame, metric: str = "std") -> pd.DataFrame:
     """Use a metric to aggregate the variations for each prompt.
 
-    :param df: pd.DataFrame: DataFrame with raw benchmark results
-    :param metric: str:  (Default value = "std") metric to use (Default value = "std", )
-    :returns: A DataFrame containing a aggregated score per prompt
+    Args:
+      df: DataFrame with raw benchmark results
+      metric:  metric to use
+
+    Returns:
+      A DataFrame containing a aggregated score per prompt
+
     """
     agg_dict = {
         "prompt": "first",
@@ -34,8 +38,10 @@ def plot_result(final_df: pd.DataFrame, out_dir: Path):
     """Plots a line plot and a comparative bar plot visualizing the final
     results of the benchmark for one model.
 
-    :param final_df: pd.DataFrame:final benchmark results
-    :out_dir: Path: where to save
+    Args:
+      final_df: pd.DataFrame:final benchmark results
+      out_dir: where to save
+
     """
     # Line plot
     # final_df.loc[final_df["category"] == "realistic", "prompt_id"] -= 40
@@ -65,10 +71,10 @@ def generate_and_score(
     """Run the benchmark and add scores to the DataFrame in place.
 
     Args:
-        df (pd.DataFrame): DataFrame containing the prompts and variations with
-            MultiIndex ["prompt_id", "variation"]
-        img_dir (Path): where to save the generated images
-        scorer (CLIPScore | ALIGNScore): text-to-image similarity score to use
+      df: DataFrame containing the prompts and variations with MultiIndex ["prompt_id", "variation"]
+      img_dir: where to save the generated images
+      scorer: text-to-image similarity score to use
+
     """
     os.makedirs(img_dir, exist_ok=True)
     for i, prompt in tqdm(df["prompt"].items(), total=df.shape[0]):
@@ -83,12 +89,12 @@ def main(
     """Run the benchmark, save final_result and visualization.
 
     Args:
-        prompts (Path): path to a tsv file containing the columns
-                        ["prompt_id", "variation", "prompt", "category"]
-        out_dir (Path): output folder for the results, the directory will be populated
-                        with a folder containing the benchmark results
-        model (IModel): the model to be tested
-        scorer (ALIGNScore | CLIPScore): text-to-image similarity score to use
+      prompts: path to a tsv file containing the columns
+        ["prompt_id", "variation", "prompt", "category"]
+      out_dir: output folder for the results, the directory will be populated
+        with a folder containing the benchmark results
+      model: the model to be tested
+      scorer: text-to-image similarity score to use
 
     """
 
