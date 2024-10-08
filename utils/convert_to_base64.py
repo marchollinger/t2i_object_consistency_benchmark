@@ -1,9 +1,5 @@
 import base64
 import io
-import os
-
-import numpy as np
-from PIL import Image
 
 
 def get_base64_url(path_or_buffer: io.BytesIO | str) -> str:
