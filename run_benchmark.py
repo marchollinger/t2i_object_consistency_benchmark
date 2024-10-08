@@ -9,36 +9,45 @@ import seaborn as sns
 from matplotlib import pyplot as plt
 from tqdm import tqdm
 
+from utils import IModel
 from utils.sim_scores import ALIGNScore, CLIPScore
 from utils.t2i_variants import DALL_E, SD, SD3
 
 
 def aggregate_object_scores(df: pd.DataFrame, metric: str = "std") -> pd.DataFrame:
-    """
-    Use a metric to aggregate the variations for each prompt.
+    """Use a metric to aggregate the variations for each prompt.
 
-    :param df: DataFrame with raw benchmark results
-    :param metric: metric to use (Default value = "std", )
-
+    :param df: pd.DataFrame: DataFrame with raw benchmark results
+    :param metric: str:  (Default value = "std") metric to use (Default value = "std", )
     :returns: A DataFrame containing a aggregated score per prompt
     """
-    agg_dict = {"prompt": "first", "category": "first", "score": metric}
+    agg_dict = {
+        "prompt": "first",
+        "category": "first",
+        "score": metric,
+    }
     df = df.groupby(level=0).agg(agg_dict)
     return df
 
 
 def plot_result(final_df: pd.DataFrame, out_dir: Path):
-    """
-    Plots a line plot and a comparative bar plot visualizing the final results of the benchmark for one model.
+    """Plots a line plot and a comparative bar plot visualizing the final
+    results of the benchmark for one model.
 
-    :param final_df: final benchmark results
-    :param out_dir: where to save the plots
-
+    :param final_df: pd.DataFrame:final benchmark results
+    :out_dir: Path: where to save
     """
     # Line plot
     # final_df.loc[final_df["category"] == "realistic", "prompt_id"] -= 40
     fig, ax = plt.subplots()
-    sns.lineplot(final_df, x="prompt_id", y="score", hue="category", marker="o", ax=ax)
+    sns.lineplot(
+        final_df,
+        x="prompt_id",
+        y="score",
+        hue="category",
+        marker="o",
+        ax=ax,
+    )
     ax.set_ylabel("faithfulness")
     fig.savefig(out_dir / "line.pdf")
 
@@ -50,16 +59,17 @@ def plot_result(final_df: pd.DataFrame, out_dir: Path):
     fig.savefig(out_dir / "compare_means.pdf")
 
 
-def generate_and_score(df, img_dir, scorer, subfolder=None):
-    """
+def generate_and_score(
+    df: pd.DataFrame, img_dir: Path, scorer: CLIPScore | ALIGNScore
+) -> None:
+    """Run the benchmark and add scores to the DataFrame in place.
 
-    :param df:
-    :param img_dir:
-    :param scorer:
-    :param subfolder:  (Default value = None)
-
+    Args:
+        df (pd.DataFrame): DataFrame containing the prompts and variations with
+            MultiIndex ["prompt_id", "variation"]
+        img_dir (Path): where to save the generated images
+        scorer (CLIPScore | ALIGNScore): text-to-image similarity score to use
     """
-    img_dir = img_dir / subfolder if subfolder else img_dir
     os.makedirs(img_dir, exist_ok=True)
     for i, prompt in tqdm(df["prompt"].items(), total=df.shape[0]):
         img_path = img_dir / (str(i[0]) + "_" + str(i[1]) + ".png")
@@ -67,17 +77,26 @@ def generate_and_score(df, img_dir, scorer, subfolder=None):
         df.loc[i, "score"] = scorer.calculate_score(img_path, prompt)
 
 
-def main(prompts, out_dir, model, scorer):
+def main(
+    prompts: Path, out_dir: Path, model: IModel, scorer: ALIGNScore | CLIPScore
+) -> None:
+    """Run the benchmark, save final_result and visualization.
+
+    Args:
+        prompts (Path): path to a tsv file containing the columns
+                        ["prompt_id", "variation", "prompt", "category"]
+        out_dir (Path): output folder for the results, the directory will be populated
+                        with a folder containing the benchmark results
+        model (IModel): the model to be tested
+        scorer (ALIGNScore | CLIPScore): text-to-image similarity score to use
+
     """
 
-    :param prompts:
-    :param out_dir:
-    :param model:
-    :param scorer:
-
-    """
     prompt_df = pd.read_csv(
-        prompts, index_col=["prompt_id", "variation"], header=0, delimiter="\t"
+        prompts,
+        index_col=["prompt_id", "variation"],
+        header=0,
+        delimiter="\t",
     )
 
     # run the benchmark
@@ -123,7 +142,8 @@ if __name__ == "__main__":
         "--test_prompts",
         type=Path,
         default="./data/abstract_vs_realistic.csv",
-        help='path to a csv file containing prompts and prompt-variations (default: "data/abstract_vs_realistic.csv")',
+        help="path to a csv file containing prompts and prompt-variations"
+        '(default: "data/abstract_vs_realistic.csv")',
     )
     parser.add_argument(
         "--score_name",
@@ -160,10 +180,3 @@ if __name__ == "__main__":
         sys.exit(1)
 
     main(args.test_prompts, args.out_dir, model, scorer)
-
-    parser.add_argument(
-        "--test_prompts",
-        type=Path,
-        default="./data/abstract_vs_realistic.csv",
-        help="path to a csv file containing prompts and prompt-variations (default: /data/abstract_vs_realistic.csv)",
-    )
