@@ -13,13 +13,28 @@ from utils.sim_scores import ALIGNScore, CLIPScore
 from utils.t2i_variants import DALL_E, SD, SD3
 
 
-def aggregate_object_scores(final_df, metric="std"):
+def aggregate_object_scores(df: pd.DataFrame, metric: str = "std") -> pd.DataFrame:
+    """
+    Use a metric to aggregate the variations for each prompt.
+
+    :param df: DataFrame with raw benchmark results
+    :param metric: metric to use (Default value = "std", )
+
+    :returns: A DataFrame containing a aggregated score per prompt
+    """
     agg_dict = {"prompt": "first", "category": "first", "score": metric}
-    final_df = final_df.groupby(level=0).agg(agg_dict)
-    return final_df
+    df = df.groupby(level=0).agg(agg_dict)
+    return df
 
 
-def plot_result(final_df, out_dir):
+def plot_result(final_df: pd.DataFrame, out_dir: Path):
+    """
+    Plots a line plot and a comparative bar plot visualizing the final results of the benchmark for one model.
+
+    :param final_df: final benchmark results
+    :param out_dir: where to save the plots
+
+    """
     # Line plot
     # final_df.loc[final_df["category"] == "realistic", "prompt_id"] -= 40
     fig, ax = plt.subplots()
@@ -36,6 +51,14 @@ def plot_result(final_df, out_dir):
 
 
 def generate_and_score(df, img_dir, scorer, subfolder=None):
+    """
+
+    :param df:
+    :param img_dir:
+    :param scorer:
+    :param subfolder:  (Default value = None)
+
+    """
     img_dir = img_dir / subfolder if subfolder else img_dir
     os.makedirs(img_dir, exist_ok=True)
     for i, prompt in tqdm(df["prompt"].items(), total=df.shape[0]):
@@ -45,6 +68,14 @@ def generate_and_score(df, img_dir, scorer, subfolder=None):
 
 
 def main(prompts, out_dir, model, scorer):
+    """
+
+    :param prompts:
+    :param out_dir:
+    :param model:
+    :param scorer:
+
+    """
     prompt_df = pd.read_csv(
         prompts, index_col=["prompt_id", "variation"], header=0, delimiter="\t"
     )
@@ -82,11 +113,30 @@ if __name__ == "__main__":
         description="Run the object consistency benchmark for a given model.",
     )
     parser.add_argument(
-        "--model_id", type=str, default="stabilityai/stable-diffusion-2", required=True, help="hugging face model-ID"
+        "--model_id",
+        type=str,
+        default="stabilityai/stable-diffusion-2",
+        required=True,
+        help="hugging face model-ID",
     )
-    parser.add_argument("--test_prompts", type=Path, default="./data/abstract_vs_realistic.csv", help="path to a csv file containing prompts and prompt-variations (default: \"data/abstract_vs_realistic.csv\")")
-    parser.add_argument("--score_name", type=str, default="align", help="score tetote use (default: \"align\")")
-    parser.add_argument("--out_dir", type=Path, default="./", help="where to save results (default: \"./\")")
+    parser.add_argument(
+        "--test_prompts",
+        type=Path,
+        default="./data/abstract_vs_realistic.csv",
+        help='path to a csv file containing prompts and prompt-variations (default: "data/abstract_vs_realistic.csv")',
+    )
+    parser.add_argument(
+        "--score_name",
+        type=str,
+        default="align",
+        help='score tetote use (default: "align")',
+    )
+    parser.add_argument(
+        "--out_dir",
+        type=Path,
+        default="./",
+        help='where to save results (default: "./")',
+    )
     args = parser.parse_args()
     if args.score_name == "clip":
         scorer = CLIPScore()
@@ -111,5 +161,9 @@ if __name__ == "__main__":
 
     main(args.test_prompts, args.out_dir, model, scorer)
 
-
-    parser.add_argument("--test_prompts", type=Path, default="./data/abstract_vs_realistic.csv", help="path to a csv file containing prompts and prompt-variations (default: /data/abstract_vs_realistic.csv)")
+    parser.add_argument(
+        "--test_prompts",
+        type=Path,
+        default="./data/abstract_vs_realistic.csv",
+        help="path to a csv file containing prompts and prompt-variations (default: /data/abstract_vs_realistic.csv)",
+    )
