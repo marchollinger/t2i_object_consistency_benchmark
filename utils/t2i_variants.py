@@ -74,11 +74,3 @@ class SD(Model):
         image = self.pipe(prompt=prompt).images[0]
         return image
 
-
-def main():
-    model = SD3("stabilityai/stable-diffusion-3-medium-diffusers")
-    model.invoke("A vase with flowers.").save(f"test.png", format="png")
-
-
-if __name__ == "__main__":
-    main()
