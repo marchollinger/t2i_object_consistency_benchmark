@@ -18,11 +18,11 @@ def aggregate_object_scores(df: pd.DataFrame, metric: str = "std") -> pd.DataFra
     """Use a metric to aggregate the variations for each prompt.
 
     Args:
-      df: DataFrame with raw benchmark results
-      metric:  metric to use
+      df: DataFrame with raw benchmark results.
+      metric:  Metric to use.
 
     Returns:
-      A DataFrame containing a aggregated score per prompt
+      A DataFrame containing a aggregated score per prompt.
 
     """
     agg_dict = {
@@ -39,12 +39,11 @@ def plot_result(final_df: pd.DataFrame, out_dir: Path):
     results of the benchmark for one model.
 
     Args:
-      final_df: pd.DataFrame:final benchmark results
-      out_dir: where to save
+      final_df: Final benchmark results.
+      out_dir: Where to save the plots.
 
     """
-    # Line plot
-    # final_df.loc[final_df["category"] == "realistic", "prompt_id"] -= 40
+    # Line plot before aggregating to show variation
     fig, ax = plt.subplots()
     sns.lineplot(
         final_df,
@@ -57,7 +56,9 @@ def plot_result(final_df: pd.DataFrame, out_dir: Path):
     ax.set_ylabel("faithfulness")
     fig.savefig(out_dir / "line.pdf")
 
+    # aggregate scores
     final_df = aggregate_object_scores(final_df)
+
     # Compare means
     fig, ax = plt.subplots()
     sns.barplot(final_df, x="category", y="score", hue="category")
@@ -71,9 +72,9 @@ def generate_and_score(
     """Run the benchmark and add scores to the DataFrame in place.
 
     Args:
-      df: DataFrame containing the prompts and variations with MultiIndex ["prompt_id", "variation"]
-      img_dir: where to save the generated images
-      scorer: text-to-image similarity score to use
+      df: DataFrame containing the prompts and variations with MultiIndex ["prompt_id", "variation"].
+      img_dir: Where to save the generated images.
+      scorer: Text-to-image similarity score to use.
 
     """
     os.makedirs(img_dir, exist_ok=True)
@@ -89,12 +90,12 @@ def main(
     """Run the benchmark, save final_result and visualization.
 
     Args:
-      prompts: path to a tsv file containing the columns
-        ["prompt_id", "variation", "prompt", "category"]
-      out_dir: output folder for the results, the directory will be populated
-        with a folder containing the benchmark results
-      model: the model to be tested
-      scorer: text-to-image similarity score to use
+      prompts: Path to a tsv file containing the columns
+        ["prompt_id", "variation", "prompt", "category"].
+      out_dir: Output folder for the results, the directory will be populated
+        with a folder containing the benchmark results.
+      model: The model to be tested
+      scorer: text-to-image similarity score to use.
 
     """
 
@@ -112,19 +113,20 @@ def main(
     os.makedirs(csv_dir, exist_ok=True)
     generate_and_score(prompt_df, img_dir, scorer)
 
+    # save raw scores for visualization
     prompt_df.to_csv(csv_dir / "raw_scores.csv", sep="\t")
 
-    # Output the results
+    # save plots for single model
     plot_result(prompt_df, csv_dir)
+
+    # save the final score to a file
     prompt_df = aggregate_object_scores(prompt_df)
     diff = (
         prompt_df.loc[prompt_df["category"] == "realistic", "score"].mean()
         - prompt_df.loc[prompt_df["category"] == "abstract", "score"].mean()
     )
-
     with open(csv_dir / "final_score.txt", "w+") as f:
         print(
-            # f"Difference between realistic and simplified consistency: {diff:.5f}",
             diff,
             file=f,
         )
