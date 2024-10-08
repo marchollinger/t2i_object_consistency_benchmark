@@ -11,12 +11,10 @@ from run_benchmark import aggregate_object_scores
 
 def compare_means_grouped(df: pd.DataFrame, score_name: str) -> Figure:
     """Produces a bar plot to visualize the difference between categories.
-
     Args:
         df: The final benchmark results for all models merged into one DataFrame
             with columns ["prompt_id", "variation", "prompt", "category", "score", "model"].
-        metric: The name of the aggregation metric used to obtain the scores per prompt.
-
+        score_name: The name of the aggregation metric used to obtain the scores per prompt.
     Returns:
         A figure containing the plot.
     """
@@ -30,9 +28,9 @@ def box_means_grouped(df: pd.DataFrame, metric: str) -> Figure:
     """Produces a box plot to visualize the difference in mean and variation between categories.
 
     Args:
-        df: The final benchmark results for all models merged into one DataFrame
+        df (pd.DataFrame): The final benchmark results for all models merged into one DataFrame
             with columns ["prompt_id", "variation", "prompt", "category", "score", "model"].
-        metric: The name of the aggregation metric used to obtain the scores per prompt.
+        metric (str): The name of the aggregation metric used to obtain the scores per prompt.
 
     Returns:
         A figure containing the plot.
@@ -55,8 +53,8 @@ def compare_models(model_output_dir: Path, out_dir: Path, metric="std"):
     """Produce plots comparing all the model results in the directory.
 
     Args:
-        model_output_dir: Path to directory containing the model results.
-        out_dir: Directory to save the plots to.
+        model_output_dir (Path): Path to directory containing the model results.
+        out_dir (Path): Directory to save the plots to.
         metric: Metric to use for aggregating the variation scores. Defaults to "std".
     """
     model_dirs = [m for m in model_output_dir.glob("./*") if m.is_dir()]
@@ -82,6 +80,7 @@ def compare_models(model_output_dir: Path, out_dir: Path, metric="std"):
 
 
 def main():
+    """Main function."""
 
     compare_models(Path("./out"), Path("./"), metric="std")
 
