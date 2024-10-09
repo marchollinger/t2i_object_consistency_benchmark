@@ -168,17 +168,9 @@ if __name__ == "__main__":
         print("\n\n[Error] Could not find a similarity metric by this name")
         sys.exit(1)
 
-    if args.model_id in (
-        "stabilityai/stable-diffusion-2",
-        "stabilityai/stable-diffusion-2-1",
-    ):
-        model = SD(args.model_id)
-    elif args.model_id == "stabilityai/stable-diffusion-3-medium-diffusers":
-        model = SD3(args.model_id)
-    elif args.model_id in ("dalle-e-2", "dall-e-3"):
+    if args.model_id in ("dalle-e-2", "dall-e-3"):
         model = DALL_E(args.model_id)
     else:
-        print("\n\n[Error] Invalid model-ID")
-        sys.exit(1)
+        model = SD(args.model_id)
 
     main(args.test_prompts, args.out_dir, model, scorer)

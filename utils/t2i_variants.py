@@ -3,10 +3,12 @@ from time import sleep
 
 import torch
 from diffusers import StableDiffusion3Pipeline, StableDiffusionPipeline
-from IModel import Model
 from langchain_community.utilities.dalle_image_generator import DallEAPIWrapper
 from openai import BadRequestError
 from PIL import Image
+from skimage.io import imread
+
+from utils.IModel import Model
 
 
 class DALL_E(Model):
@@ -27,7 +29,7 @@ class DALL_E(Model):
         else:
             raise err
 
-        im = io.imread(url)
+        im = imread(url)
         im = Image.fromarray(im)
         return im
 

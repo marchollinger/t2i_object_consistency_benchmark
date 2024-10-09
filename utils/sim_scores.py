@@ -1,5 +1,5 @@
-from abc import ABC, abstractmethod
 import io
+from abc import ABC, abstractmethod
 from pathlib import Path
 
 from PIL import Image
@@ -25,7 +25,7 @@ class CLIPScore(SimScore):
         self.model = CLIPModel.from_pretrained("openai/clip-vit-base-patch16")
 
 
-class ALIGNScore:
+class ALIGNScore(SimScore):
     def __init__(self):
         self.processor = AlignProcessor.from_pretrained("kakaobrain/align-base")
         self.model = AlignModel.from_pretrained("kakaobrain/align-base")
