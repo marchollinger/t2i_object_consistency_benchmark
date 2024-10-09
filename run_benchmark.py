@@ -11,7 +11,7 @@ from tqdm import tqdm
 
 from utils import IModel
 from utils.sim_scores import ALIGNScore, CLIPScore
-from utils.t2i_variants import DALL_E, SD, SD3
+from utils.t2i_variants import DALL_E, SD
 
 
 def aggregate_object_scores(df: pd.DataFrame, metric: str = "std") -> pd.DataFrame:

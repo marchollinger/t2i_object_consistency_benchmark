@@ -1,4 +1,3 @@
-import io
 from time import sleep
 
 import torch
@@ -54,9 +53,3 @@ class SD(Model):
     def invoke(self, prompt):
         image = self.pipe(prompt=prompt).images[0]
         return image
-
-
-class SD3(SD):
-    def __init__(self, model_id="stabilityai/stable-diffusion-3-medium-diffusers"):
-        super().__init__(model_id=model_id)
-        self.pipe.set_progress_bar_config(disable=True)
