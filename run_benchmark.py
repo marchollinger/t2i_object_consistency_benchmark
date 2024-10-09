@@ -154,6 +154,7 @@ if __name__ == "__main__":
         help='score tetote use (default: "align")',
     )
     parser.add_argument(
+        "-o",
         "--out_dir",
         type=Path,
         default="./",
