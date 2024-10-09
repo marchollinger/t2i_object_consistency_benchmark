@@ -32,6 +32,8 @@ containing the prompts to test
 
 `--out_dir`: directory to save results and images
 
+## Visualizing the results
+
 After running the benchmark, the output directory will be populated with a
 folder whose name is the model-id and that contains the generated images as
 well as the final score and plots to visualize the result.
