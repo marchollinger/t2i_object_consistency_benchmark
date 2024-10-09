@@ -19,15 +19,18 @@ The benchmark is run using `run_benchmark.py`, which takes the following argumen
 run_benchmark.py --test_prompts <path> --out_dir <path> --model_id <string> --score_name <string>
 ```
 
-- `--model_id (default="stabilityai/stable-diffusion-2")`: text-to-image model to test; a new model can be added as
-  long as it conforms to the interface defined in `utils.IModel`; the choices provided by default
-  are: "stabilityai/stable-diffusion-2", "stabilityai/stable-diffusion-2-1",
-  "stabilityai/stable-diffusion-3-medium-diffusers", "dall-e-2", "dall-e-3"; a
-  valid API key is required to use DALL-E
-- `--test_prompts (default="./abstract_vs_realistic.csv")` is a `csv` file
-  containing the prompts to test
-- `--score_name (default="align")`: similarity metric to use, can be "clip" or "align" 
-- `--out_dir`: directory to save results and images
+`--model_id (default="stabilityai/stable-diffusion-2")`: text-to-image model to test; a new model can be added as
+long as it conforms to the interface defined in `utils.IModel`; the choices provided by default
+are: "stabilityai/stable-diffusion-2", "stabilityai/stable-diffusion-2-1",
+"stabilityai/stable-diffusion-3-medium-diffusers", "dall-e-2", "dall-e-3"; a
+valid API key is required to use DALL-E
+
+`--test_prompts (default="./abstract_vs_realistic.csv")` is a `csv` file
+containing the prompts to test
+
+`--score_name (default="align")`: similarity metric to use, can be "clip" or "align" 
+
+`--out_dir`: directory to save results and images
 
 After running the benchmark, the output directory will be populated with a
 folder whose name is the model-id and that contains the generated images as
