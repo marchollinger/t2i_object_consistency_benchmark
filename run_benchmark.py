@@ -23,7 +23,6 @@ def aggregate_object_scores(df: pd.DataFrame, metric: str = "std") -> pd.DataFra
 
     Returns:
         A DataFrame containing a aggregated score per prompt.
-
     """
     agg_dict = {
         "prompt": "first",
@@ -40,7 +39,6 @@ def plot_result(final_df: pd.DataFrame, out_dir: Path) -> None:
     Args:
         final_df: Final benchmark results.
         out_dir: Where to save the plots.
-
     """
     # Line plot before aggregating to show variation
     fig, ax = plt.subplots()
@@ -74,7 +72,6 @@ def generate_and_score(
         df: DataFrame containing the prompts and variations with MultiIndex ["prompt_id", "variation"].
         img_dir: Where to save the generated images.
         scorer: Text-to-image similarity score to use.
-
     """
     os.makedirs(img_dir, exist_ok=True)
     for i, prompt in tqdm(df["prompt"].items(), total=df.shape[0]):
@@ -94,7 +91,6 @@ def main(
             the benchmark results.
         model: The model to be tested
         scorer: text-to-image similarity score to use.
-
     """
 
     prompt_df = pd.read_csv(
