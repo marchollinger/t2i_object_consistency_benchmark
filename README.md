@@ -9,7 +9,7 @@ generating faithful images for one of the two categories.
 The benchmark score is the difference between the performance on the two
 categories. A low absolute score is better than a high absolute score.
 
-For more details regarding the benchmark see the [report](https://raw.githubusercontent.com/marchollinger/t2i_object_consistency_benchmark/main/paper/object_consistency.pdf).
+For more details regarding the benchmark see the [report](https://raw.githubusercontent.com/marchollinger/t2i_object_consistency_benchmark/main/report/object_consistency.pdf).
 
 ## How to run the benchmark
 
