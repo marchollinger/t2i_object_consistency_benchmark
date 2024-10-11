@@ -11,6 +11,16 @@ categories. A low absolute score is better than a high absolute score.
 
 For more details regarding the benchmark see the [report](https://raw.githubusercontent.com/marchollinger/t2i_object_consistency_benchmark/main/report/object_consistency.pdf).
 
+
+## Requirements
+
+Using `python>=3.10`, install the dependencies in `requirements.txt`.
+
+```
+pip install -r requirements.txt
+```
+
+
 ## How to run the benchmark
 
 The benchmark is run using `run_benchmark.py`, which takes the following arguments:
